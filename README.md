@@ -1,14 +1,14 @@
 <h1 align="center">🌱Project: OrganShop - Website bán thực phẩm Organic</h1>
 
 ## 👤 Thông Tin Cá Nhân  
-- **Họ tên**: [Điền tên bạn]
-- **Mã sinh viên**: [Điền mã SV]
+- **Họ tên**: Phan Thị Gia Hân
+- **Mã sinh viên**: CNTT_8
 - **Lớp**: [Điền lớp]
 - **Môn học**: Xây dựng web nâng cao (TH3)
 
 ## 📈 Mục đích dự án
 - Xây dựng website bán thực phẩm Organic giúp khách hàng dễ dàng xem, đặt hàng, thanh toán và theo dõi quá trình giao hàng.
-- Hỗ trợ chủ shop quản lý sản phẩm, đơn hàng, khách hàng, doanh thu, đánh giá và thông báo.
+- Hỗ trợ chủ shop quản lý sản phẩm, đơn hàng, khách hàng, danh mục và thông báo.
 - Cung cấp thông tin hữu ích về thực phẩm sạch, giúp khách hàng lựa chọn sản phẩm an toàn cho sức khỏe.
 
 ## ⚙ Hệ thống sử dụng
