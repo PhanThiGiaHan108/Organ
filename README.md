@@ -2,8 +2,8 @@
 
 ## 👤 Thông Tin Cá Nhân  
 - **Họ tên**: Phan Thị Gia Hân
-- **Mã sinh viên**: CNTT_8
-- **Lớp**: [Điền lớp]
+- **Mã sinh viên**: 23010840
+- **Lớp**: CNTT_8
 - **Môn học**: Xây dựng web nâng cao (TH3)
 
 ## 📈 Mục đích dự án
