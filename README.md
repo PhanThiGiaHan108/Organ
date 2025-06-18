@@ -1,4 +1,4 @@
-<h1 align="center">🌱Project: OrganShop - Website bán thực phẩm Organic</h1>
+<h1 align="center">🌱Project: Website bán thực phẩm Organic</h1>
 
 ## 👤 Thông Tin Cá Nhân  
 - **Họ tên**: Phan Thị Gia Hân
@@ -11,14 +11,16 @@
 - Hỗ trợ chủ shop quản lý sản phẩm, đơn hàng, khách hàng, danh mục và thông báo.
 - Cung cấp thông tin hữu ích về thực phẩm sạch, giúp khách hàng lựa chọn sản phẩm an toàn cho sức khỏe.
 
-## ⚙ Hệ thống sử dụng
-- PHP (Laravel framework)
-- MySQL/SQLite
-- Eloquent ORM
-- Blade, Bootstrap 5, Tailwind CSS
-- Laravel Security (middleware, CSRF, validation)
-- AJAX JQuery (tìm kiếm, cập nhật nhanh)
-- Notification (thông báo quá trình giao hàng)
+## 🛠️ Công nghệ sử dụng
+
+| Công nghệ | Mô tả |
+|----------|-------|
+| **Laravel (PHP)** | Backend framework chính |
+| **Laravel Breeze** | Hệ thống xác thực, session |
+| **Blade + Tailwind CSS** | Giao diện người dùng |
+| **MySQL (Aiven)** | Cơ sở dữ liệu |
+| **Eloquent ORM** | Truy vấn và xử lý dữ liệu |
+| **Middleware** | Bảo mật CSRF, kiểm soát truy cập |
 
 ## ⚙️ Sơ đồ chức năng
 
