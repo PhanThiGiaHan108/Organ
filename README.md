@@ -177,7 +177,7 @@ public function update(Request $request, $id)
 
 ## Github link
 
-<https://github.com/[PhanThiGiaHan108]/Organ/>
+[https://github.com/[PhanThiGiaHan108]/Organ](https://github.com/PhanThiGiaHan108/Organ)
 
 ## Demo website
 <https://your-demo-link.com/>
