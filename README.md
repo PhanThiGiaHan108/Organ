@@ -26,7 +26,7 @@
 
 Sơ đồ tổng quát
 
-![image](assets/so-do-khoi.png)
+![image](https://github.com/user-attachments/assets/so-do-khoi.png)
 
 Quy trình đặt hàng
 
