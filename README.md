@@ -47,13 +47,14 @@ Quản lý  thông báo
 
 Đăng ký tài khoản
 
-![Sơ đồ hệ thống](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
 
+Đăng nhập
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/loginn.png)
 
+Thêm sản phẩm vào giỏ
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/themvaogio.png)
 
-## Sơ đồ khối 
-
-![image](https://github.com/user-attachments/assets/so-do-khoi-organic.png)
 
 ---
 
