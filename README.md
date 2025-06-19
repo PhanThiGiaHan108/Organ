@@ -26,7 +26,8 @@
 
 Sơ đồ tổng quát
 
-![image](https://github.com/assets/so-do-khoi.png)
+[![Sơ đồ khối](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)
+
 
 Quy trình đặt hàng
 
