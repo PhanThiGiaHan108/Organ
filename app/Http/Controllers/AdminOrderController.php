@@ -16,7 +16,7 @@ class AdminOrderController extends Controller
         $orders = Order::when($keyword, function ($query, $keyword) {
                 $query->where('name', 'like', "%{$keyword}%");
             })
-            ->with('orderDetails.product') // nếu có quan hệ này
+            ->with('orderDetails.product') 
             ->latest()
             ->paginate(10);
 

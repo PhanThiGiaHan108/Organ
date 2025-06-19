@@ -14,7 +14,7 @@ class Contact extends Model
         'phone',
         'message',
         'is_read',
-        'user_id', // nếu có cột user_id
+        'user_id', 
     ];
 
     /**
@@ -26,7 +26,7 @@ class Contact extends Model
     }
 
     /**
-     * Lấy thông tin user gửi tin nhắn (nếu có cột user_id).
+     * Lấy thông tin user gửi tin nhắn.
      */
     public function user(): BelongsTo
     {

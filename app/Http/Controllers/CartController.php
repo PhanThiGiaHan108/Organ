@@ -22,7 +22,7 @@ class CartController extends Controller
         return view('user.shopcart', [
             'cart' => $cart,
             'subtotal' => $subtotal,
-            'total' => $subtotal, // hoặc cộng phí ship
+            'total' => $subtotal, 
         ]);
     }
       

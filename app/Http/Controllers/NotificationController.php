@@ -44,7 +44,7 @@ class NotificationController extends Controller
         $userEmail = Auth::user()->email;
 
         $unreadCount = Contact::where('email', $userEmail)
-                              ->whereHas('replies') // chỉ tính thông báo đã có phản hồi
+                              ->whereHas('replies') 
                               ->where('is_read', false)
                               ->count();
 

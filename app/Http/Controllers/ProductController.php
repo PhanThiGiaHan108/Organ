@@ -116,7 +116,7 @@ class ProductController extends Controller
                     ->orWhere('description', 'like', '%' . $keyword . '%')
                     ->get();
 
-        $categories = Category::withCount('products')->get(); // đảm bảo có danh sách category nếu trang shop cần
+        $categories = Category::withCount('products')->get(); 
 
         return view('user.shop', [
             'products' => $products,
