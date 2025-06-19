@@ -38,8 +38,9 @@ Quản lý sản phẩm
 ![image](https://github.com/user-attachments/assets/so-do-quan-ly-san-pham.png)
 
 Quản lý đơn hàng & thông báo
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dh&tb.png)
 
-![image](https://github.com/user-attachments/assets/so-do-thong-bao-don-hang.png)
+
 
 ## 📊 Sơ đồ tuần tự
 
