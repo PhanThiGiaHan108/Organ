@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e16246f5-3e27-4f08-b662-8ba6994d3ba3)<h1 align="center">🌱Project: Website bán thực phẩm Organic</h1>
+<h1 align="center">🌱Project: Website bán thực phẩm Organic</h1>
 
 ## 👤 Thông Tin Cá Nhân  
 - **Họ tên**: Phan Thị Gia Hân
@@ -196,29 +196,31 @@ public function update(Request $request, $id)
 ![Đăng nhập](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-nhap.png)
 
 Trang chủ
-![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)
-![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
+	![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)
+	![Home 2](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
+
+ 
 Trang giới thiệu
-![Giới thiệu ](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giothieu.png)
+	![Giới thiệu](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/gioithieu.png)
 
 
 Trang sản phẩm
 
-![Shop](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/shop.png)
+	![Shop](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/shop.png)
 
 
 Trang giỏ hàng
 
-![Giỏ hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giohang.png)
+	![Giỏ hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giohang.png)
 
 Trang checkout
-![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
+	![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
 
 Trang Contact
-![Liên hệ](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/contact.png)
+	![Liên hệ](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/contact.png)
 
  Trang phản hồi
- ![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
+	![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
 
 Trang quản lý đơn hàng (admin)
 
