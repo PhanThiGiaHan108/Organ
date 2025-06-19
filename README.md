@@ -45,7 +45,8 @@ Quản lý đơn hàng & thông báo
 
 Đăng ký tài khoản
 
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
+![Sơ đồ hệ thống](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
+
 
 
 
