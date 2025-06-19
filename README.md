@@ -1,4 +1,4 @@
-<h1 align="center">🌱Project: Website bán thực phẩm Organic</h1>
+![image](https://github.com/user-attachments/assets/e16246f5-3e27-4f08-b662-8ba6994d3ba3)<h1 align="center">🌱Project: Website bán thực phẩm Organic</h1>
 
 ## 👤 Thông Tin Cá Nhân  
 - **Họ tên**: Phan Thị Gia Hân
@@ -51,6 +51,23 @@ Quản lý đơn hàng & thông báo
 
 
 Đặt hàng & nhận thông báo
+             +---------------------+
+             |  Đặt hàng & Nhận thông báo |
+             +-----------+---------+
+                         |
+         +---------------+--------------+
+         |               |              |
+         v               v              v
++----------------+  +----------------+  +-------------------+
+| Chọn sản phẩm  |  | Thanh toán     |  | Nhận thông báo    |
++----------------+  +----------------+  +-------------------+
+         |                                  |
+         v                                  v
++--------------------+           +--------------------------+
+| Xác nhận đơn hàng  |           | Thông báo trạng thái đơn |
++--------------------+           +--------------------------+
+
+
 
 ![image](https://github.com/user-attachments/assets/so-do-dat-hang-thong-bao.png)
 
@@ -139,12 +156,11 @@ public function update(Request $request, $id)
     return redirect()->route('admin.order')->with('success', 'Order updated successfully.');
 }
 ```
-
-## View
+### 📄 Blade Template (View)
+![View](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/view.png)
 
 - Sử dụng Blade, Bootstrap, Tailwind.
 - Hiển thị thông báo quá trình giao hàng qua chuông (bell icon).
-- Đánh giá sản phẩm theo sao sau khi nhận hàng.
 
 ---
 
@@ -170,18 +186,39 @@ public function update(Request $request, $id)
 ---
 
 <h1> 📷 Một số hình ảnh chức năng chính</h1>
+Đăng ký
+![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png)
+
+
+
+
+Đăng nhập
+![Đăng nhập](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-nhap.png)
 
 Trang chủ
+![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)
+![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
+Trang giới thiệu
+![Giới thiệu ](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giothieu.png)
 
-![image](https://github.com/user-attachments/assets/trang-chu-organic.png)
 
 Trang sản phẩm
 
-![image](https://github.com/user-attachments/assets/san-pham-organic.png)
+![Shop](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/shop.png)
+
 
 Trang giỏ hàng
 
-![image](https://github.com/user-attachments/assets/gio-hang-organic.png)
+![Giỏ hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giohang.png)
+
+Trang checkout
+![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
+
+Trang Contact
+![Liên hệ](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/contact.png)
+
+ Trang phản hồi
+ ![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
 
 Trang quản lý đơn hàng (admin)
 
