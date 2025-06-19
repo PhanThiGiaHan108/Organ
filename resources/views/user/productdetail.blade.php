@@ -14,8 +14,8 @@
                     </div>
                 </div>
                <div class="col-lg-6 col-md-6">
-    <div class="product__details__text">
-        <h3>{{ $product->name }}</h3>
+        <div class="product__details__text">
+            <h3>{{ $product->name }}</h3>
 
 
         <!-- Giá -->
@@ -27,20 +27,20 @@
         <p>{{ $product->description }}</p>
 
         <!-- Form thêm vào giỏ -->
-        <form action="{{ route('cart.add') }}" method="POST">
-    @csrf
-    <input type="hidden" name="product_id" value="{{ $product->id }}">
-    
-    <div class="product__details__quantity">
-        <div class="quantity">
-            <div class="pro-qty">
-                <input name="quantity" value="1" min="1" type="number">
-            </div>
-        </div>
-    </div>
+            <form action="{{ route('cart.add') }}" method="POST">
+                @csrf
+                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                
+                <div class="product__details__quantity">
+                    <div class="quantity">
+                        <div class="pro-qty">
+                            <input name="quantity" value="1" min="1" type="number">
+                        </div>
+                    </div>
+                </div>
 
-    <button type="submit" class="primary-btn">ADD TO CARD</button>
-</form>
+                <button type="submit" class="primary-btn">ADD TO CARD</button>
+            </form>
 
 
         <!-- Thông tin thêm -->

@@ -135,7 +135,6 @@
                                 </form>
                             </div>
                         </div>
-
                         <div class="sidebar__item1">
                                 <div class="latest-product__text">
                                     <h4>Latest Products</h4>
