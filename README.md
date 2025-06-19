@@ -28,52 +28,36 @@ Sơ đồ tổng quát
 
 [![Sơ đồ khối](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)
 
-
-Quy trình đặt hàng
-
-![image](https://github.com/user-attachments/assets/so-do-quy-trinh-dat-hang.png)
-
 Quản lý sản phẩm
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlsp.png)
 
-![image](https://github.com/user-attachments/assets/so-do-quan-ly-san-pham.png)
+Quản lý tài khoản
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qltk.png)
 
-Quản lý đơn hàng & thông báo
+Quản lý đơn đặt hàng
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qld.png)
 
-![image](https://github.com/user-attachments/assets/so-do-thong-bao-don-hang.png)
+Quản lý  thông báo
+
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dh&tb.png)
+
+
 
 ## 📊 Sơ đồ tuần tự
 
 Đăng ký tài khoản
 
-![Sơ đồ hệ thống](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
+
+Đăng nhập
+
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/loginn.png)
 
 
+Thêm sản phẩm vào giỏ
 
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/themvaogio.png)
 
-Đặt hàng & nhận thông báo
-             +---------------------+
-             |  Đặt hàng & Nhận thông báo |
-             +-----------+---------+
-                         |
-         +---------------+--------------+
-         |               |              |
-         v               v              v
-+----------------+  +----------------+  +-------------------+
-| Chọn sản phẩm  |  | Thanh toán     |  | Nhận thông báo    |
-+----------------+  +----------------+  +-------------------+
-         |                                  |
-         v                                  v
-+--------------------+           +--------------------------+
-| Xác nhận đơn hàng  |           | Thông báo trạng thái đơn |
-+--------------------+           +--------------------------+
-
-
-
-![image](https://github.com/user-attachments/assets/so-do-dat-hang-thong-bao.png)
-
-## Sơ đồ khối 
-
-![image](https://github.com/user-attachments/assets/so-do-khoi-organic.png)
 
 ---
 
@@ -500,8 +484,10 @@ public function send(Request $request)
 
         return view('admin.user', compact('users'));
     }
+```
 
     // Cập nhật thông tin người dùng
+```php
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -551,6 +537,24 @@ public function send(Request $request)
 - Sử dụng Eloquent ORM để chống SQL Injection.
 - Escape dữ liệu khi hiển thị ra view để chống XSS.
 
+Ví dụ:
+```php
+<!-- Form thêm vào giỏ -->
+            <form action="{{ route('cart.add') }}" method="POST">
+                @csrf
+                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                
+                <div class="product__details__quantity">
+                    <div class="quantity">
+                        <div class="pro-qty">
+                            <input name="quantity" value="1" min="1" type="number">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn">ADD TO CARD</button>
+            </form>
+```
 ---
 
 <h1> 🔗 Link </h1>
