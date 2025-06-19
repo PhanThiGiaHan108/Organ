@@ -15,6 +15,7 @@ use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\AdminProductController;
 
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\NotificationController;
 
 
 
@@ -67,6 +68,7 @@ Route::get('/order-success', function () {
 
  Route::get('user/contact', [ContactController::class, 'contact'])->name('contact');
  Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+ 
  
 
 
@@ -122,3 +124,21 @@ Route::get('/admin/category', [AdminCategoryController::class, 'index'])->name('
 
 
 
+Route::middleware('auth')->group(function () {
+    Route::get('/notifications/fetch', [NotificationController::class, 'fetch']);
+    Route::get('/notifications/unread-count', [NotificationController::class, 'unreadCount']);
+    Route::post('/notifications/mark-all', [NotificationController::class, 'markAllAsRead']);
+});
+
+//Route admin notification
+Route::post('/admin/contact-replies', [NotificationController::class, 'storeReply'])->name('contact-replies.store');
+
+Route::get('/admin/notification', [NotificationController::class, 'index'])->name('admin.notification');
+Route::get('/my-messages', [ContactController::class, 'userMessages'])->middleware('auth')->name('contact.userMessages');
+// routes/web.php
+Route::middleware(['auth'])->group(function () {
+    Route::get('/notifications/unread-count', [NotificationController::class, 'unreadCount'])->name('notifications.unreadCount');
+    Route::get('/user/messages', [NotificationController::class, 'message'])->name('user.messages');
+    Route::get('/notifications/counts', [NotificationController::class, 'counts'])->name('notifications.counts');
+
+});

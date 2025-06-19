@@ -75,7 +75,7 @@
                                 <li>
                                     <a href="{{ route('user.shop') }}"
                                     style="{{ request('category') || request('price') ? 'font-weight: bold; color: red;' : '' }}">
-                                        🗙 Tất cả sản phẩm
+                                        🗙 All products
                                     </a>
                                 </li>
 
@@ -110,14 +110,14 @@
                                             @endphp
 
                                             @foreach([
-                                                '' => 'Tất cả mức giá',
-                                                '0-50000' => 'VNĐ 0 - VNĐ 50,000',
-                                                '50001-100000' => 'VNĐ 50,001 - VNĐ 100,000',
-                                                '100001-200000' => 'VNĐ 100,001 - VNĐ 200,000',
-                                                '200001-300000' => 'VNĐ 200,001 - VNĐ 300,000',
-                                                '300001-540000' => 'VNĐ 300,001 - VNĐ 540,000',
-                                                "$minPrice-$minPrice" => 'Giá thấp nhất',
-                                                "$maxPrice-$maxPrice" => 'Giá cao nhất',
+                                                '' => 'All prices',
+                                                '0-50000' => 'đ 0 - đ 50,000',
+                                                '50001-100000' => 'đ 50,001 - đ 100,000',
+                                                '100001-200000' => 'đ 100,001 - đ 200,000',
+                                                '200001-300000' => 'đ 200,001 - đ 300,000',
+                                                '300001-540000' => 'đ 300,001 - đ 540,000',
+                                                "$minPrice-$minPrice" => 'Min Price',
+                                                "$maxPrice-$maxPrice" => 'Max Price',
                                             ] as $value => $label)
                                                 <li>
                                                     <label style="{{ $currentPrice == $value ? 'color: #7fad39; font-weight: bold;' : '' }}">

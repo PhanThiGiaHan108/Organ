@@ -30,6 +30,16 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+.hover-dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0; /* đảm bảo không bị lệch */
+}
+
+.hover-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+}
+
 html,
 body {
 	height: 100%;

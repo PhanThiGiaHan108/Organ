@@ -14,19 +14,19 @@
                         <p>Thực phẩm sạch từ thiên nhiên</p>
                     </div>
                     <p>
-                        <strong>OganiShop</strong> là cửa hàng chuyên cung cấp các sản phẩm nông sản sạch, hữu cơ (Organic)
+                        <strong>OrganiShop</strong> là cửa hàng chuyên cung cấp các sản phẩm nông sản sạch, hữu cơ (Organic)
                         được tuyển chọn kỹ lưỡng từ các trang trại đạt chuẩn. Chúng tôi cam kết mang đến cho khách hàng
                         những sản phẩm chất lượng, an toàn cho sức khỏe và thân thiện với môi trường.
                     </p>
                     <p>
-                        Tại OganiShop, chúng tôi tin rằng thực phẩm không chỉ là nguồn dinh dưỡng mà còn là nền tảng cho một
+                        Tại OrganiShop, chúng tôi tin rằng thực phẩm không chỉ là nguồn dinh dưỡng mà còn là nền tảng cho một
                         lối sống khỏe mạnh. Từng loại rau, củ, quả hay thực phẩm khô đều được kiểm định nghiêm ngặt, không
                         hóa chất, không chất bảo quản.
                     </p>
                     <ul class="about__features">
                         <li>Sản phẩm đạt chứng nhận hữu cơ</li>
                         <li>Giao hàng nhanh chóng trong ngày</li>
-                        <li>Hỗ trợ tư vấn dinh dưỡng miễn phí</li>
+                        <li>Hỗ trợ giao hàng miễn phí</li>
                     </ul>
                      <a href="{{ route('user.shop') }}" class="primary-btn mt-3">
                         <i class="fa fa-shopping-basket"></i> Khám phá cửa hàng

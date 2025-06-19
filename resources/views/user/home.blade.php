@@ -10,7 +10,7 @@
                     <div class="hero__categories">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
-                            <span>Danh mục</span>
+                            <span>All departments</span>
                         </div>
                         <ul>
                             @foreach ($categories as $category)
@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Sản Phẩm Nổi Bật</h2>
+                        <h2>Featured Products</h2>
                     </div>
                     <div class="featured__controls">
                         <ul>

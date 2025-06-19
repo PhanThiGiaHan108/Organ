@@ -17,14 +17,6 @@
     <div class="product__details__text">
         <h3>{{ $product->name }}</h3>
 
-        <!-- Đánh giá sao giả lập -->
-        <div class="product__details__rating">
-            @for ($i = 0; $i < 4; $i++)
-                <i class="fa fa-star"></i>
-            @endfor
-            <i class="fa fa-star-half-o"></i>
-            <span>(18 reviews)</span>
-        </div>
 
         <!-- Giá -->
         <div class="product__details__price">
@@ -47,15 +39,15 @@
         </div>
     </div>
 
-    <button type="submit" class="primary-btn">Thêm vào giỏ hàng</button>
+    <button type="submit" class="primary-btn">ADD TO CARD</button>
 </form>
 
 
         <!-- Thông tin thêm -->
         <ul>
-            <li><b>Khả dụng</b> <span>{{ $product->stock > 0 ? 'In Stock' : 'Out of Stock' }}</span></li>
+            <li><b>Availability</b> <span>{{ $product->stock > 0 ? 'In Stock' : 'Out of Stock' }}</span></li>
             <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-            <li><b>Cân nặng</b> <span>{{ $product->weight ?? '1 kg' }}</span></li>
+            <li><b>Weight</b> <span>{{ $product->weight ?? '1 kg' }}</span></li>
         </ul>
     </div>
 </div>
@@ -67,10 +59,7 @@
                                 <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
                                     aria-selected="true">Description</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
-                                    aria-selected="false">Reviews <span>(1)</span></a>
-                            </li>
+                            
                         </ul>  
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="tabs-1" role="tabpanel">
@@ -79,12 +68,7 @@
                                     <p>{{ $product->description }}</p>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="tabs-3" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>Reviews (1)</h6>
-                                    <p>Great product! Highly recommend.</p>
-                                </div>
-                            </div>
+                           
                         
     </section>
  </section> 

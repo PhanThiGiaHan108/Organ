@@ -14,6 +14,7 @@ class ContactsSeeder extends Seeder
             'email' => 'john.doe@example.com',
             'phone' => '1234567890',
             'message' => 'I have a question about your products.',
+             'is_read' => false,
         ]);
 
         Contact::create([
@@ -21,6 +22,7 @@ class ContactsSeeder extends Seeder
             'email' => 'jane.smith@example.com',
             'phone' => '0987654321',
             'message' => 'Please contact me for support.',
+             'is_read' => false,
         ]);
     }
 }

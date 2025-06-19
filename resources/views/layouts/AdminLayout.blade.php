@@ -98,12 +98,24 @@ background:rgb(234, 245, 235);
       <!-- Phần bên phải -->
       <div class="ms-auto d-flex align-items-center gap-3">
         <!-- Chuông thông báo -->
-        <a href="#" class="text-decoration-none text-primary position-relative">
+       <li class="nav-item dropdown">
+     <a href="{{ route('admin.notification') }}" class="text-decoration-none text-primary position-relative">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#333" class="bi bi-bell" viewBox="0 0 16 16">
               <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
           </svg>
-         
+          @php
+              use App\Models\Contact;
+              $contactCount = Contact::where('is_read', false)->count();
+          @endphp
+          @if ($contactCount > 0)
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill " style="background: #21A1CB  ">
+                  {{ $contactCount }}
+              </span>
+          @endif
         </a>
+
+</li>
+
 
         <!-- Avatar và dropdown -->
         <div class="dropdown" >
@@ -171,10 +183,6 @@ background:rgb(234, 245, 235);
             Category
           </a>
         </li>
-        <li class="nav-item">
-
-          <p>Notification</p>
-        </li>
       </ul>
     </div>
 
@@ -199,6 +207,43 @@ background:rgb(234, 245, 235);
       });
     });
   </script>
+  <script>
+function fetchAdminNotifications() {
+    fetch("{{ url('/notifications/fetch') }}")
+        .then(res => res.json())
+        .then(data => {
+            let html = '';
+            data.forEach(noti => {
+                html += `<div class="mb-2">
+                            <strong>${noti.title}</strong><br>
+                            <small>${noti.message}</small>
+                        </div><hr>`;
+            });
+            document.getElementById("admin-noti-list").innerHTML = html || "<em>Không có thông báo.</em>";
+        });
+
+    fetch("{{ url('/notifications/unread-count') }}")
+        .then(res => res.json())
+        .then(data => {
+            const countSpan = document.getElementById("admin-noti-count");
+            countSpan.innerText = data.count > 0 ? data.count : '';
+        });
+}
+
+function markAdminNotiAsRead() {
+    fetch("{{ url('/notifications/mark-all') }}", {
+        method: "POST",
+        headers: {
+            "X-CSRF-TOKEN": "{{ csrf_token() }}",
+            "Content-Type": "application/json"
+        }
+    }).then(() => fetchAdminNotifications());
+}
+
+setInterval(fetchAdminNotifications, 10000); // cập nhật mỗi 10s
+window.onload = fetchAdminNotifications;
+</script>
+
 </body>
 </html>
 

@@ -54,11 +54,6 @@
                                     </button>
                                     <ul class="dropdown-menu show-dropdown">
                                         <li>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fa fa-user-circle me-2"></i> Profile
-                                            </a>
-                                        </li>
-                                        <li>
                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                                 <i class="fa fa-sign-out me-2"></i> Logout
@@ -103,8 +98,16 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="header__cart">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-bell"></i> <span></span></a></li>
+                         <ul>
+                             <li class="nav-item dropdown hover-dropdown">
+    <a id="notificationDropdown" class="nav-link" href="{{ route('user.messages') }}">
+        <i class="fa fa-bell"></i>
+        <span class="badge bg-danger" id="noti-count" style="display: none;"></span>
+    </a>
+</li>
+
+
+
                             <li>
                                 <a href="{{ route('shop.cart') }}">
                                     <i class="fa fa-shopping-bag"></i> 
@@ -186,8 +189,30 @@
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <!-- Bootstrap Bundle JS (includes Popper for dismissible alerts) -->
-<script src="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js')}}"></script>
+<script>
+function fetchNotificationCounts() {
+    fetch("{{ route('notifications.counts') }}")
+        .then(response => response.json())
+        .then(data => {
+            const countElem = document.getElementById("noti-count");
 
+            if (data.total > 0 && data.unread > 0) {
+                // Hiển thị khi có thông báo chưa đọc
+                countElem.innerText = data.total;
+                countElem.style.display = 'inline-block';
+            } else {
+                // Ẩn khi đã xem hết
+                countElem.style.display = 'none';
+            }
+        })
+        .catch(error => console.error("Lỗi khi fetch thông báo:", error));
+}
+
+document.addEventListener("DOMContentLoaded", fetchNotificationCounts);
+
+
+
+</script>
 
 </body>
 </html>
