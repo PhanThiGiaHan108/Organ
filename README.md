@@ -187,7 +187,7 @@ public function update(Request $request, $id)
 
 <h1> 📷 Một số hình ảnh chức năng chính</h1>
 Đăng ký
-![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png)
+![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png).
 
 
 
@@ -197,7 +197,7 @@ public function update(Request $request, $id)
 
 Trang chủ
 	![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)
-	![Home 2](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/imgaes/home2.png)
+	![Home 2](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
 
  
 Trang giới thiệu
