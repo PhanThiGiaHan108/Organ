@@ -29,14 +29,6 @@ Sơ đồ tổng quát
 [![Sơ đồ khối](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)
 
 
-Quy trình đặt hàng
-
-![image](https://github.com/user-attachments/assets/so-do-quy-trinh-dat-hang.png)
-
-Quản lý sản phẩm
-
-![image](https://github.com/user-attachments/assets/so-do-quan-ly-san-pham.png)
-
 Quản lý đơn hàng & thông báo
 ![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dh&tb.png)
 
@@ -69,8 +61,6 @@ Quản lý đơn hàng & thông báo
 +--------------------+           +--------------------------+
 
 
-
-![image](https://github.com/user-attachments/assets/so-do-dat-hang-thong-bao.png)
 
 ## Sơ đồ khối 
 
