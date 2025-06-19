@@ -203,13 +203,13 @@ public function update(Request $request, $id)
 
 Trang chủ
 
-	![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)
-	![Home 2](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
+![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)
+![Home 2](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
 
  
 Trang giới thiệu
 
-	![Giới thiệu](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/gioithieu.png)
+![Giới thiệu](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/gioithieu.png)
 
 
 Trang sản phẩm
@@ -223,15 +223,15 @@ Trang giỏ hàng
 
 Trang checkout
 
-	![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
+![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
 
 Trang Contact
 
-	![Liên hệ](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/contact.png)
+![Liên hệ](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/contact.png)
 
  Trang phản hồi
  
-	![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
+![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
 
 ----Admin---
 
