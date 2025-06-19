@@ -178,7 +178,7 @@ public function update(Request $request, $id)
 
 ## Github link
 
-<https://github.com/[your-github]/OrganShop/>
+<https://github.com/[PhanThiGiaHan108]/Organ/>
 
 ## Demo website
 <https://your-demo-link.com/>
@@ -186,6 +186,8 @@ public function update(Request $request, $id)
 ---
 
 <h1> 📷 Một số hình ảnh chức năng chính</h1>
+
+-----User----
 Đăng ký  
 
 ![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png)
@@ -230,13 +232,28 @@ Trang Contact
  
 	![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
 
-Trang quản lý đơn hàng (admin)
+----Admin---
 
-![image](https://github.com/user-attachments/assets/quan-ly-don-hang-admin.png)
 
-Thông báo quá trình giao hàng
+Dashboard
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home_admin.png)
 
-![image](https://github.com/user-attachments/assets/thong-bao-giao-hang.png)
+Quản lý user
+
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlu.png)
+
+Quản đơn hàng
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlo.png)
+
+Quản lý sản phẩm
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlp.png)
+
+Quản lý danh mục
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlc.png)
+
+Thông báo
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/thongbao.png)
+
 
 ---
 
