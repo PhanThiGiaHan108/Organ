@@ -30,6 +30,8 @@ Sơ đồ tổng quát
 
 
 Quản lý đơn hàng & thông báo
+
+
 ![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dh&tb.png)
 
 
@@ -39,26 +41,6 @@ Quản lý đơn hàng & thông báo
 Đăng ký tài khoản
 
 ![Sơ đồ hệ thống](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
-
-
-
-
-Đặt hàng & nhận thông báo
-             +---------------------+
-             |  Đặt hàng & Nhận thông báo |
-             +-----------+---------+
-                         |
-         +---------------+--------------+
-         |               |              |
-         v               v              v
-+----------------+  +----------------+  +-------------------+
-| Chọn sản phẩm  |  | Thanh toán     |  | Nhận thông báo    |
-+----------------+  +----------------+  +-------------------+
-         |                                  |
-         v                                  v
-+--------------------+           +--------------------------+
-| Xác nhận đơn hàng  |           | Thông báo trạng thái đơn |
-+--------------------+           +--------------------------+
 
 
 
