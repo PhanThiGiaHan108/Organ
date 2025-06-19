@@ -159,8 +159,7 @@ public function update(Request $request, $id)
 ### 📄 Blade Template (View)
 ![View](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/view.png)
 
-- Sử dụng Blade, Bootstrap, Tailwind.
-- Hiển thị thông báo quá trình giao hàng qua chuông (bell icon).
+
 
 ---
 
