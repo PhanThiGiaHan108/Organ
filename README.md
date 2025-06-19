@@ -195,14 +195,17 @@ public function update(Request $request, $id)
 
 
 Đăng nhập
+
 ![Đăng nhập](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-nhap.png)
 
 Trang chủ
+
 	![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)
 	![Home 2](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
 
  
 Trang giới thiệu
+
 	![Giới thiệu](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/gioithieu.png)
 
 
@@ -212,15 +215,19 @@ Trang sản phẩm
 
 
 Trang giỏ hàng
+
 ![Giỏ hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giohang.png)
 
 Trang checkout
+
 	![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
 
 Trang Contact
+
 	![Liên hệ](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/contact.png)
 
  Trang phản hồi
+ 
 	![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
 
 Trang quản lý đơn hàng (admin)
