@@ -484,8 +484,10 @@ public function send(Request $request)
 
         return view('admin.user', compact('users'));
     }
+```
 
     // Cập nhật thông tin người dùng
+```php
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -535,6 +537,24 @@ public function send(Request $request)
 - Sử dụng Eloquent ORM để chống SQL Injection.
 - Escape dữ liệu khi hiển thị ra view để chống XSS.
 
+Ví dụ:
+```php
+<!-- Form thêm vào giỏ -->
+            <form action="{{ route('cart.add') }}" method="POST">
+                @csrf
+                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                
+                <div class="product__details__quantity">
+                    <div class="quantity">
+                        <div class="pro-qty">
+                            <input name="quantity" value="1" min="1" type="number">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn">ADD TO CARD</button>
+            </form>
+```
 ---
 
 <h1> 🔗 Link </h1>
