@@ -186,8 +186,8 @@ public function update(Request $request, $id)
 ---
 
 <h1> 📷 Một số hình ảnh chức năng chính</h1>
-Đăng ký
-![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png).
+### Đăng ký  
+![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png)
 
 
 
@@ -206,12 +206,11 @@ Trang giới thiệu
 
 Trang sản phẩm
 
-	![Shop](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/shop.png).
+![Shop](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/shop.png)
 
 
 Trang giỏ hàng
-
-	![Giỏ hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giohang.png)
+![Giỏ hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giohang.png)
 
 Trang checkout
 	![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
