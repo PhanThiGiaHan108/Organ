@@ -28,9 +28,16 @@ Sơ đồ tổng quát
 
 [![Sơ đồ khối](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)
 
+Quản lý sản phẩm
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlsp.png)
 
-Quản lý đơn hàng & thông báo
+Quản lý tài khoản
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qltk.png)
 
+Quản lý đơn đặt hàng
+![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qld.png)
+
+Quản lý  thông báo
 
 ![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dh&tb.png)
 
