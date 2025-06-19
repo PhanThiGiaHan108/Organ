@@ -187,6 +187,8 @@ public function update(Request $request, $id)
 <h1> 📷 Một số hình ảnh chức năng chính</h1>
 
 -----User----
+
+
 Đăng ký  
 
 ![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png)
