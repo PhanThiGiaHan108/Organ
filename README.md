@@ -22,9 +22,9 @@
 | **Eloquent ORM** | Truy vấn và xử lý dữ liệu |
 | **Middleware** | Bảo mật CSRF, kiểm soát truy cập |
 
-## ⚙️ Sơ đồ chức năng
+## ⚙️ Sơ đồ
 
-Sơ đồ tổng quát
+📌 Sơ Đồ Khối
 
 [![Sơ đồ khối](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)
 
