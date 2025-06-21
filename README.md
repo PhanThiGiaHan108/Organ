@@ -59,14 +59,17 @@
 
 ## 📊 Sơ Đồ Tuần Tự
 
-- **Đăng ký**  
+- **Sử dụng hệ thống**  
   ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
 
-- **Đăng nhập**  
-  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/loginn.png)
+- **Quản lý sản phẩm**  
+  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlsp.png)
 
-- **Thêm vào giỏ hàng**  
-  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/themvaogio.png)
+- **Quản lý đơn đặt hàng**
+  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qld.png)
+  
+- **Quản lý tài khoản**
+  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qltk.png)
 
 ---
 
