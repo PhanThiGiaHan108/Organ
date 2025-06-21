@@ -51,6 +51,7 @@
 ![Sơ đồ khối](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)
 
 ### 🔹 Sơ đồ chức năng
+
  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/chucnang.png)
 
 ---
