@@ -27,6 +27,7 @@
 📌 Sơ Đồ Khối
 
 [![Sơ đồ khối](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)
+📌 Sơ Đồ Chức Năng
 
 Quản lý sản phẩm
 ![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlsp.png)
