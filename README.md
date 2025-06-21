@@ -618,7 +618,7 @@ Ví dụ:
   ![Quản lý sản phẩm](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlp.png)
 
 - **Quản lý danh mục**  
-  ![Quản lý danh mục](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlv.png)
+  ![Quản lý danh mục](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlc.png)
 
 - **Thông báo**  
   ![Thông báo](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/thongbao.png)
