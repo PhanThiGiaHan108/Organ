@@ -52,7 +52,8 @@
 
 ### 🔹 Sơ đồ chức năng
 
- ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/chucnang.png)
+![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/chucnang.drawio.png)
+
 
 ---
 
