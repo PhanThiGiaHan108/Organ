@@ -61,6 +61,9 @@
 
 - **Sử dụng hệ thống**  
   ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
+  
+  - **Quản lý tài khoản**
+  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qltk.png)
 
 - **Quản lý sản phẩm**  
   ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlsp.png)
@@ -68,8 +71,9 @@
 - **Quản lý đơn đặt hàng**
   ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qld.png)
   
-- **Quản lý tài khoản**
-  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qltk.png)
+  
+- **Quản lý danh mục**
+  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/cuoi.png)
 
 ---
 
