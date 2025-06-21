@@ -543,33 +543,8 @@ Ví dụ:
 <!-- Form thêm vào giỏ -->
             <form action="{{ route('cart.add') }}" method="POST">
                 @csrf
-                <input type="hidden" name="product_id" value="{{ $product->id }}">
-                
-                <div class="product__details__quantity">
-                    <div class="quantity">
-                        <div class="pro-qty">
-                            <input name="quantity" value="1" min="1" type="number">
-                        </div>
-                    </div>
-                </div>
+                <input type="hidden" name="product_id" value="h2>
 
-                <button type="submit" class="primary-btn">ADD TO CARD</button>
-            </form>
-```
----
-
-<h1> 🔗 Link </h1>
-
-## Github link
-
-[https://github.com/[PhanThiGiaHan108]/Organ](https://github.com/PhanThiGiaHan108/Organ)
-
-
----
-
-<h1> 📷 Một số hình ảnh chức năng chính</h1>
-
-<h1 align="center"> User
 
 
 Đăng ký  
