@@ -569,7 +569,7 @@ Ví dụ:
 
 <h1> 📷 Một số hình ảnh chức năng chính</h1>
 
------User----
+<h1 align="center"> User
 
 
 Đăng ký  
