@@ -615,7 +615,7 @@ Ví dụ:
   ![Quản lý đơn hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlo.png)
 
 - **Quản lý sản phẩm**  
-  ![Quản lý sản phẩm](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlt.png)
+  ![Quản lý sản phẩm](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlp.png)
 
 - **Quản lý danh mục**  
   ![Quản lý danh mục](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlc.png)
