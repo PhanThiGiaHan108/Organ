@@ -1,68 +1,74 @@
 <h1 align="center">🌱Project: Website bán thực phẩm Organic</h1>
 
-## 👤 Thông Tin Cá Nhân  
-- **Họ tên**: Phan Thị Gia Hân
-- **Mã sinh viên**: 23010840
-- **Lớp**: CNTT_8
-- **Môn học**: Xây dựng web nâng cao (TH3)
+## 📚 Mục lục
 
-## 📈 Mục đích dự án
-- Xây dựng website bán thực phẩm Organic giúp khách hàng dễ dàng xem, đặt hàng, thanh toán và theo dõi quá trình giao hàng.
-- Hỗ trợ chủ shop quản lý sản phẩm, đơn hàng, khách hàng, danh mục và thông báo.
-- Cung cấp thông tin hữu ích về thực phẩm sạch, giúp khách hàng lựa chọn sản phẩm an toàn cho sức khỏe.
-
-## 🛠️ Công nghệ sử dụng
-
-| Công nghệ | Mô tả |
-|----------|-------|
-| **Laravel (PHP)** | Backend framework chính |
-| **Laravel Breeze** | Hệ thống xác thực, session |
-| **Blade + Tailwind CSS** | Giao diện người dùng |
-| **MySQL (Aiven)** | Cơ sở dữ liệu |
-| **Eloquent ORM** | Truy vấn và xử lý dữ liệu |
-| **Middleware** | Bảo mật CSRF, kiểm soát truy cập |
-
-## ⚙️ Sơ đồ
-
-📌 Sơ Đồ Khối
-
-[![Sơ đồ khối](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)
-📌 Sơ Đồ Chức Năng
-
-Quản lý sản phẩm
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlsp.png)
-
-Quản lý tài khoản
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qltk.png)
-
-Quản lý đơn đặt hàng
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qld.png)
-
-Quản lý  thông báo
-
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dh&tb.png)
-
-
-
-## 📊 Sơ đồ tuần tự
-
-Đăng ký tài khoản
-
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
-
-Đăng nhập
-
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/loginn.png)
-
-
-Thêm sản phẩm vào giỏ
-
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/themvaogio.png)
+- [👤 Thông Tin Cá Nhân](#-thông-tin-cá-nhân)
+- [📈 Mục Đích Dự Án](#-mục-đích-dự-án)
+- [🛠️ Công Nghệ Sử Dụng](#️-công-nghệ-sử-dụng)
+- [⚙️ Kiến Trúc Hệ Thống & Sơ Đồ](#️-kiến-trúc-hệ-thống--sơ-đồ)
+- [📊 Sơ Đồ Tuần Tự](#-sơ-đồ-tuần-tự)
+- [💻 Một Số Code Minh Họa](#một-số-code-minh-họa)
+- [🔐 Bảo Mật](#-bảo-mật)
+- [📸 Một Số Hình Ảnh Giao Diện](#-một-số-hình-ảnh-giao-diện)
+- [📝 License](#-license)
 
 
 ---
 
-<h1>Một số code minh họa</h1>
+## 👤 Thông Tin Cá Nhân
+
+- **Họ tên**: Phan Thị Gia Hân  
+- **MSSV**: 23010840  
+- **Lớp**: CNTT_8  
+- **Môn học**: Xây dựng Web Nâng Cao (TH3)
+
+---
+
+## 📈 Mục Đích Dự Án
+
+- Cung cấp nền tảng website giúp người dùng mua thực phẩm Organic trực tuyến.
+- Hỗ trợ quản lý sản phẩm, đơn hàng, khách hàng, danh mục và thông báo hiệu quả.
+- Tăng nhận thức về thực phẩm sạch, an toàn cho sức khỏe.
+
+---
+
+## 🛠️ Công Nghệ Sử Dụng
+
+| Công nghệ        | Vai trò chính                        |
+|------------------|--------------------------------------|
+| **Laravel**      | Framework PHP backend chính          |
+| **Laravel Breeze** | Xác thực người dùng, session       |
+| **Blade + Tailwind CSS** | Giao diện frontend nhẹ, đẹp  |
+| **MySQL (Aiven)** | Cơ sở dữ liệu chính                 |
+| **Eloquent ORM**  | Xử lý dữ liệu dạng hướng đối tượng |
+| **Middleware**    | Bảo mật & kiểm soát truy cập        |
+
+---
+
+## ⚙️ Kiến Trúc Hệ Thống & Sơ Đồ
+
+### 🔹 Sơ đồ khối
+![Sơ đồ khối](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/so-do-khoi.png)
+
+### 🔹 Sơ đồ chức năng
+ ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/chucnang.png)
+
+---
+
+## 📊 Sơ Đồ Tuần Tự
+
+- **Đăng ký**  
+  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/he-thong.png)
+
+- **Đăng nhập**  
+  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/loginn.png)
+
+- **Thêm vào giỏ hàng**  
+  ![](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/themvaogio.png)
+
+---
+
+<h1>💻Một Số Code Minh Họa</h1>
 
 ## Model
 
@@ -529,8 +535,9 @@ public function send(Request $request)
 
 
 ---
+## 🔐 Bảo Mật
 
-<h1> 🔒 Security Setup</h1>
+
 
 - Sử dụng CSRF Token cho mọi form.
 - Validate dữ liệu đầu vào ở Controller/Request.
@@ -540,83 +547,79 @@ public function send(Request $request)
 
 Ví dụ:
 ```php
-<!-- Form thêm vào giỏ -->
+ <!-- Form thêm vào giỏ -->
             <form action="{{ route('cart.add') }}" method="POST">
                 @csrf
-                <input type="hidden" name="product_id" value="h2>
+                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                
+                <div class="product__details__quantity">
+                    <div class="quantity">
+                        <div class="pro-qty">
+                            <input name="quantity" value="1" min="1" type="number">
+                        </div>
+                    </div>
+                </div>
 
+                <button type="submit" class="primary-btn">ADD TO CARD</button>
+            </form>
 
-<h1> 📷 Một số hình ảnh chức năng chính</h1>
-<h2 align="center">User</h2>
-Đăng ký  
+```
+## 📷 Một Số Hình Ảnh Giao Diện
 
-![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png)
+### 👤 Người Dùng (User)
 
+- **Đăng ký**  
+  ![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png)
 
+- **Đăng nhập**  
+  ![Đăng nhập](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-nhap.png)
 
+- **Trang chủ**  
+  ![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)  
+  ![Home 2](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
 
+- **Trang giới thiệu**  
+  ![Giới thiệu](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/gioithieu.png)
 
-Đăng nhập
+- **Trang sản phẩm**  
+  ![Shop](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/shop.png)
 
-![Đăng nhập](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-nhap.png)
+- **Giỏ hàng**  
+  ![Giỏ hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giohang.png)
 
-Trang chủ
+- **Thanh toán (Checkout)**  
+  ![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
 
-![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)
-![Home 2](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
+- **Liên hệ**  
+  ![Contact](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/contact.png)
 
- 
-Trang giới thiệu
-
-![Giới thiệu](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/gioithieu.png)
-
-
-Trang sản phẩm
-
-![Shop](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/shop.png)
-
-
-Trang giỏ hàng
-
-![Giỏ hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giohang.png)
-
-Trang checkout
-
-![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
-
-Trang Contact
-
-![Liên hệ](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/contact.png)
-
- Trang phản hồi
- 
-![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
-
-----Admin---
-
-
-Dashboard
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home_admin.png)
-
-Quản lý user
-
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlu.png)
-
-Quản đơn hàng
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlo.png)
-
-Quản lý sản phẩm
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlp.png)
-
-Quản lý danh mục
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlc.png)
-
-Thông báo
-![image](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/thongbao.png)
-
+- **Trang phản hồi**  
+  ![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
 
 ---
 
-<h1>License & Copy Rights</h1>
+### 🔧 Quản Trị Viên (Admin)
 
-The Laravel framework is open-sourced software licensed under the <a href="https://opensource.org/licenses/MIT" rel="nofollow">MIT license.</a>
+- **Dashboard**  
+  ![Dashboard](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home_admin.png)
+
+- **Quản lý người dùng**  
+  ![Quản lý user](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlu.png)
+
+- **Quản lý đơn hàng**  
+  ![Quản lý đơn hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlo.png)
+
+- **Quản lý sản phẩm**  
+  ![Quản lý sản phẩm](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlp.png)
+
+- **Quản lý danh mục**  
+  ![Quản lý danh mục](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlc.png)
+
+- **Thông báo**  
+  ![Thông báo](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/thongbao.png)
+
+---
+
+## 📝 License
+
+This project is built using [Laravel](https://laravel.com), which is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
