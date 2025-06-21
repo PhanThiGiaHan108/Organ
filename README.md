@@ -546,7 +546,8 @@ Ví dụ:
                 <input type="hidden" name="product_id" value="h2>
 
 
-
+<h1> 📷 Một số hình ảnh chức năng chính</h1>
+<h2 align="center">User</h2>
 Đăng ký  
 
 ![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png)
