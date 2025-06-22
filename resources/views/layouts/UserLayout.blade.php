@@ -100,14 +100,11 @@
                     <div class="header__cart">
                          <ul>
                              <li class="nav-item dropdown hover-dropdown">
-    <a id="notificationDropdown" class="nav-link" href="{{ route('user.messages') }}">
-        <i class="fa fa-bell"></i>
-        <span class="badge bg-danger" id="noti-count" style="display: none;"></span>
-    </a>
-</li>
-
-
-
+                                <a id="notificationDropdown" class="nav-link" href="{{ route('user.messages') }}">
+                                    <i class="fa fa-bell"></i>
+                                    <span class="badge bg-danger" id="noti-count" style="display: none;"></span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="{{ route('shop.cart') }}">
                                     <i class="fa fa-shopping-bag"></i> 
@@ -189,30 +186,11 @@
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <!-- Bootstrap Bundle JS (includes Popper for dismissible alerts) -->
+   
+
 <script>
-function fetchNotificationCounts() {
-    fetch("{{ route('notifications.counts') }}")
-        .then(response => response.json())
-        .then(data => {
-            const countElem = document.getElementById("noti-count");
-
-            if (data.total > 0 && data.unread > 0) {
-                // Hiển thị khi có thông báo chưa đọc
-                countElem.innerText = data.total;
-                countElem.style.display = 'inline-block';
-            } else {
-                // Ẩn khi đã xem hết
-                countElem.style.display = 'none';
-            }
-        })
-        .catch(error => console.error("Lỗi khi fetch thông báo:", error));
-}
-
-document.addEventListener("DOMContentLoaded", fetchNotificationCounts);
 
 
-
-</script>
 
 </body>
 </html>

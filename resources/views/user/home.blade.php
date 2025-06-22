@@ -60,12 +60,6 @@
      <!-- Featured Section Begin -->
     <section class="featured spad">
         <div class="container">
-            @if(session('success'))
-    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
-        {{ session('success') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-@endif
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
@@ -112,3 +106,17 @@
     </section>
     <!-- Featured Section End -->
 @endsection
+  @if(session('success'))
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'Thành công!',
+                text: '{{ session('success') }}',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        });
+    </script>
+@endif

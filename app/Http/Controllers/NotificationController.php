@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Contact; 
+use App\Models\Contact;
 use App\Models\ContactReply;
 
 class NotificationController extends Controller
@@ -38,19 +38,6 @@ class NotificationController extends Controller
         return redirect()->back()->with('success', 'Đã gửi phản hồi!');
     }
 
-    // Lấy số thông báo chưa đọc của user
-    public function unreadCount()
-    {
-        $userEmail = Auth::user()->email;
-
-        $unreadCount = Contact::where('email', $userEmail)
-                              ->whereHas('replies') 
-                              ->where('is_read', false)
-                              ->count();
-
-        return response()->json(['count' => $unreadCount]);
-    }
-
     // Trang user xem các tin nhắn & đánh dấu đã đọc
     public function message()
     {
@@ -68,10 +55,17 @@ class NotificationController extends Controller
             ->latest()
             ->get();
 
-        return view('user.contact-messages', compact('contacts'));
+        // Tổng số và số chưa đọc
+        $total = $contacts->count();
+        $unread = Contact::where('email', $userEmail)
+                         ->whereHas('replies')
+                         ->where('is_read', false)
+                         ->count();
+
+        return view('user.contact-messages', compact('contacts', 'total', 'unread'));
     }
 
-    // Tùy chọn: Tổng số tất cả các liên hệ có phản hồi (có thể dùng sau)
+    // Tổng số liên hệ có phản hồi
     public function totalCount()
     {
         $userEmail = Auth::user()->email;
@@ -82,23 +76,24 @@ class NotificationController extends Controller
 
         return response()->json(['total' => $total]);
     }
+
+    // Tổng số + chưa đọc
     public function counts()
-{
-    $userEmail = Auth::user()->email;
+    {
+        $userEmail = Auth::user()->email;
 
-    $total = Contact::where('email', $userEmail)
-                    ->whereHas('replies')
-                    ->count();
+        $total = Contact::where('email', $userEmail)
+                        ->whereHas('replies')
+                        ->count();
 
-    $unread = Contact::where('email', $userEmail)
-                     ->whereHas('replies')
-                     ->where('is_read', false)
-                     ->count();
+        $unread = Contact::where('email', $userEmail)
+                         ->whereHas('replies')
+                         ->where('is_read', false)
+                         ->count();
 
-    return response()->json([
-        'total' => $total,
-        'unread' => $unread
-    ]);
-}
-
+        return response()->json([
+            'total' => $total,
+            'unread' => $unread
+        ]);
+    }
 }

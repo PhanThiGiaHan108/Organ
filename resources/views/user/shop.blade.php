@@ -1,6 +1,20 @@
 @extends('layouts.UserLayout')
 @section('title', 'Shop')
 @section('content')
+  @if(session('success'))
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'Thành công!',
+                text: '{{ session('success') }}',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        });
+    </script>
+@endif
 <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
@@ -292,3 +306,5 @@
 
     </style>
 @endsection
+
+

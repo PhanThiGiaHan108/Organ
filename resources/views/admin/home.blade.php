@@ -14,7 +14,7 @@
         <!-- Sidebar -->
         <div class="fixed w-64 h-full bg-white shadow-lg transform -translate-x-full md:translate-x-0 transition duration-200 ease-in-out z-50" id="sidebar">
             <div class="flex items-center justify-center h-16 bg-indigo-800 text-white">
-                <span class="text-xl font-bold">Admin</span>
+                <span class="text-xl font-bold"  >Admin</span>
             </div>
             <div class="overflow-y-auto h-full">
                 <ul class="mt-6">

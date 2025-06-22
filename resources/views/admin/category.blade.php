@@ -7,8 +7,8 @@
     <div class="col">
         <nav aria-label="breadcrumb" class="bg-body-tertiary rounded-3 p-3 mb-4">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="  color: rgb(71, 160, 78);">Home</a></li>
+                <li class="breadcrumb-item" ><a href="#" style="  color: rgb(71, 160, 78);">Category</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Category Management</li>
             </ol>
         </nav>
@@ -60,26 +60,20 @@
                             <span class="text-muted">No Image</span>
                         @endif
                     </td>
-                    <td>
-                        {{-- Edit --}}
-                        <a href="#" class="text-decoration-none text-warning me-2"
-                           data-bs-toggle="modal"
-                           data-bs-target="#editCategoryModal{{ $category->id }}"
-                           title="Edit">
-                            <i class="bi bi-pen"></i>
-                        </a>
-
-                        {{-- Delete --}}
-                        <form action="{{ route('admin.category', $category->id) }}" method="POST"
-                              style="display:inline-block;"
-                              onsubmit="return confirm('Bạn có chắc chắn muốn xóa danh mục này?');">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-link p-0 m-0 text-danger text-decoration-none" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </form>
-                    </td>
+                     <td>
+    
+                <a href="#" class="text-decoration-none text-warning me-2" data-bs-toggle="modal" data-bs-target="#editCategoryModal{{ $category->id }}">
+                    <span data-bs-toggle="tooltip" title="Edit">✎</span>
+                </a>
+                <form action="{{ route('admin.category', $category->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa đơn hàng này?');">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-link p-0 m-0 align-baseline text-danger text-decoration-none">
+                        <span data-bs-toggle="tooltip" title="Delete">🗑️</span>
+                    </button>
+                </form>
+            </td>
+                    
                 </tr>
             @endforeach
         </tbody>
@@ -92,37 +86,46 @@
 
     {{-- Modal Edit --}}
     @foreach ($categories as $category)
-        <div class="modal fade" id="editCategoryModal{{ $category->id }}" tabindex="-1"
-             aria-labelledby="editCategoryModalLabel{{ $category->id }}" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <form method="POST" action="{{ route('admin.category', $category->id) }}" enctype="multipart/form-data">
-                    @csrf
-                    @method('PUT')
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Chỉnh sửa danh mục</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="name{{ $category->id }}" class="form-label">Tên danh mục</label>
-                                <input type="text" class="form-control" name="name"
-                                       value="{{ old('name', $category->name) }}" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Ảnh danh mục (tùy chọn)</label>
-                                <input type="file" class="form-control" name="image">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                            <button type="submit" class="btn btn-primary">Lưu</button>
-                        </div>
+<div class="modal fade" id="editCategoryModal{{ $category->id }}" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <form method="POST" action="{{ route('admin.category.update', $category->id) }}" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chỉnh sửa danh mục</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="name{{ $category->id }}" class="form-label">Tên danh mục</label>
+                        <input type="text" class="form-control" name="name" id="name{{ $category->id }}"
+                               value="{{ old('name', $category->name) }}" required>
                     </div>
-                </form>
+
+                    <div class="mb-3">
+                        <label class="form-label">Ảnh danh mục (tùy chọn)</label>
+                        <input type="file" class="form-control" name="image" accept="image/*">
+                        @if ($category->image)
+                            <div class="mt-2 p-2 border rounded bg-light text-center">
+                                <label class="form-label">Ảnh hiện tại:</label><br>
+                                <img src="{{ asset('img/categories/' . $category->image) }}"
+                                     alt="Ảnh danh mục"
+                                     style="max-height: 200px; max-width: 100%; border-radius: 8px;">
+                            </div>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
             </div>
-        </div>
-    @endforeach
+        </form>
+    </div>
+</div>
+@endforeach
 
     {{-- Modal Add --}}
     <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">

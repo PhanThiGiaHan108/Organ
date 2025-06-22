@@ -6,8 +6,8 @@
     <div class="col">
         <nav aria-label="breadcrumb" class="bg-body-tertiary rounded-3 p-3 mb-4">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}" style="  color: rgb(71, 160, 78);">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" style="  color: rgb(71, 160, 78);">Product</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Product Management</li>
             </ol>
         </nav>
@@ -24,7 +24,7 @@
         </form>
     </div>
     <div>
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal" >
             + Thêm sản phẩm
         </button>
     </div>
@@ -57,17 +57,17 @@
                 @endif
             </td>
             <td>{{ $product->stock }}</td>
-            <td>
+             <td>
                 <a href="#" class="text-decoration-none text-primary me-2" data-bs-toggle="modal" data-bs-target="#productModal{{ $product->id }}">Details</a>
-
                 <a href="#" class="text-decoration-none text-warning me-2" data-bs-toggle="modal" data-bs-target="#editProductModal{{ $product->id }}">
-                    <i class="bi bi-pen" title="Edit"></i>
+                    <span data-bs-toggle="tooltip" title="Edit">✎</span>
                 </a>
-
-                <form action="{{ route('admin.product.destroy', $product->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Xóa sản phẩm này?');">
+                <form action="{{ route('admin.product.destroy', $product->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa đơn hàng này?');">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-link p-0 text-danger"><i class="bi bi-trash" title="Delete"></i></button>
+                    <button type="submit" class="btn btn-link p-0 m-0 align-baseline text-danger text-decoration-none">
+                        <span data-bs-toggle="tooltip" title="Delete">🗑️</span>
+                    </button>
                 </form>
             </td>
         </tr>
@@ -116,11 +116,11 @@
                     </div>
                     <div class="mb-3">
                         <label>Giá</label>
-                        <input type="number" class="form-control" name="price" value="{{ old('price', $product->price) }}" required>
+                        <input type="number" class="form-control" name="price" value="{{ intval(old('price', $product->price)) }}" required> <span class="input-group-text">VNĐ</span>
                     </div>
                     <div class="mb-3">
                         <label>Giá giảm (nếu có)</label>
-                        <input type="number" step="0.01" class="form-control" name="discount_price" value="{{ old('discount_price', $product->discount_price) }}">
+                        <input type="number" step="1" class="form-control" name="discount_price" value="{{ intval(old('discount_price', $product->discount_price)) }}"> <span class="input-group-text">VNĐ</span>
                     </div>
                     <div class="mb-3">
                         <label>Tồn kho</label>
@@ -134,7 +134,7 @@
                         <label>Ảnh sản phẩm</label>
                         <input type="file" class="form-control" name="image" accept="image/*">
                         @if ($product->image)
-                            <img src="{{ asset('storage/' . $product->image) }}" alt="Image" width="100" class="mt-2">
+                            <img src="{{ asset('img/product/' . $product->image) }}" alt="Image" width="100" class="mt-2">
                         @endif
                     </div>
                 </div>
@@ -147,6 +147,7 @@
     </div>
 </div>
 @endforeach
+
 
 <!-- Modal: Product Details -->
 @foreach ($products as $product)
@@ -174,7 +175,7 @@
                     <li class="list-group-item"><strong>Mô tả:</strong> {{ $product->description }}</li>
                     <li class="list-group-item">
                         <strong>Ảnh:</strong><br>
-                        <img src="{{ asset('img/' . $product->image) }}" alt="Image" width="150">
+                        <img src="{{ asset('img/product/' . $product->image) }}" alt="Image" width="150">
                     </li>
                     <li class="list-group-item"><strong>Ngày tạo:</strong> {{ $product->created_at }}</li>
                     <li class="list-group-item"><strong>Cập nhật:</strong> {{ $product->updated_at }}</li>
