@@ -502,8 +502,8 @@ public function send(Request $request)
     }
 ```
 
-    // Cập nhật thông tin người dùng
 ```php
+    // Cập nhật thông tin người dùng
     public function update(Request $request, $id)
     {
         $request->validate([
