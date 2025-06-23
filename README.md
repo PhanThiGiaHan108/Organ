@@ -11,6 +11,8 @@
 - [🔐 Bảo Mật](#-bảo-mật)
 - [📸 Một Số Hình Ảnh Giao Diện](#-một-số-hình-ảnh-giao-diện)
 - [📝 License](#-license)
+- [🔗Liên Kết](#-liên-kết)
+
 
 
 ---
@@ -79,7 +81,7 @@
 
 <h1>💻Một Số Code Minh Họa</h1>
 
-## Model
+<h2>📦Model</h2>
 
 #### User Model 
 ```php
@@ -401,9 +403,7 @@ class NotificationController extends Controller
 ```
  
 
-
-
-## Controller
+<h2>🧠CController</h2>
 
 #### Contact Controller
 
@@ -502,8 +502,8 @@ public function send(Request $request)
     }
 ```
 
-    // Cập nhật thông tin người dùng
 ```php
+    // Cập nhật thông tin người dùng
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -554,7 +554,7 @@ public function send(Request $request)
 - Sử dụng Eloquent ORM để chống SQL Injection.
 - Escape dữ liệu khi hiển thị ra view để chống XSS.
 
-Ví dụ:
+Ví dụ:CSRF & XSS Token bảo vệ form (ví dụ: productdetail.blade)
 ```php
  <!-- Form thêm vào giỏ -->
             <form action="{{ route('cart.add') }}" method="POST">
@@ -628,7 +628,11 @@ Ví dụ:
   ![Thông báo](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/thongbao.png)
 
 ---
-
+## 🔗 Liên Kết
+ -🔗 GitHub:https://github.com/PhanThiGiaHan108/Organ
+-▶️ YouTube Demo: 
+-🌐 Public Website: 
+ 
 ## 📝 License
 
 This project is built using [Laravel](https://laravel.com), which is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
