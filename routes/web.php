@@ -57,7 +57,7 @@ Route::get('/categories', [ProductController::class, 'showCategories'])->name('c
 Route::get('/search', [CartController::class, 'search'])->name('search');
 
 // ------------------- ADMIN ROUTES -------------------
-Route::prefix('admin')->middleware(['auth'])->group(function () {
+Route::middleware('auth')->group(function () {
     // Dashboard
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
 
@@ -80,7 +80,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     // Category management
     Route::get('/category', [AdminCategoryController::class, 'index'])->name('admin.category');
     Route::post('/categories', [AdminCategoryController::class, 'store'])->name('category.store');
-    Route::put('/categories/{id}', [AdminCategoryController::class, 'update'])->name('category.update');
+    Route::put('/categories/{id}', [AdminCategoryController::class, 'update'])->name('admin.category.update');
     Route::delete('/categories/{id}', [AdminCategoryController::class, 'destroy'])->name('category.destroy');
 
     // Notification management
