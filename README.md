@@ -1,4 +1,4 @@
-<h1 align="center">🌱Project: Website bán thực phẩm Organic</h1>
+<h1 align="center">🐰🥕🌿Project: Website bán thực phẩm Organic🌿🥕🐰</h1>
 
 ## 📚 Mục lục
 
@@ -630,8 +630,10 @@ Ví dụ:CSRF & XSS Token bảo vệ form (ví dụ: productdetail.blade)
 ---
 ## 🔗 Liên Kết
  -🔗 GitHub:https://github.com/PhanThiGiaHan108/Organ
--▶️ YouTube Demo: 
--🌐 Public Website: 
+
+ -🥦Readme (web io) :https://phanthigiahan108.github.io/Organ/
+
+-🌐 Public Website: https://organshop-master-uvy5n7.laravel.cloud/
  
 ## 📝 License
 
