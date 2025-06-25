@@ -1,4 +1,4 @@
-<h1 align="center">🐰🥕🌿Project: Website bán thực phẩm Organic🌿🥕🐰</h1>
+<h1 align="center">🥕🌿Project: Website bán thực phẩm Organic🌿🥕</h1>
 
 ## 📚 Mục lục
 
