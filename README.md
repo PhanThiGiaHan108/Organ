@@ -303,7 +303,7 @@ class CartItem extends Model
 ```
 
 
-<h2>🧠CController</h2>
+<h2>🧠Controller</h2>
 
 #### Contact Controller
 
