@@ -1,4 +1,4 @@
-<h1 align="center">🐰🥕🌿Project: Website bán thực phẩm Organic🌿🥕🐰</h1>
+<h1 align="center">🥕🌿Project: Website bán thực phẩm Organic🌿🥕</h1>
 
 ## 📚 Mục lục
 
@@ -10,8 +10,9 @@
 - [💻 Một Số Code Minh Họa](#một-số-code-minh-họa)
 - [🔐 Bảo Mật](#-bảo-mật)
 - [📸 Một Số Hình Ảnh Giao Diện](#-một-số-hình-ảnh-giao-diện)
-- [📝 License](#-license)
 - [🔗Liên Kết](#-liên-kết)
+- [📝 License](#-license)
+
 
 
 
@@ -302,108 +303,8 @@ class CartItem extends Model
 
 ```
 
-### Notification Model
-```php
-class NotificationController extends Controller
-{
-    // Trang admin: hiển thị tất cả liên hệ + phản hồi
-    public function index()
-    {
-        // Đánh dấu toàn bộ liên hệ là đã đọc (chỉ nên dùng cho admin)
-        Contact::where('is_read', false)->update(['is_read' => true]);
 
-        // Lấy liên hệ mới nhất và phản hồi tương ứng
-        $contacts = Contact::with('replies')->latest()->get();
-
-        return view('admin.notification', compact('contacts'));
-    }
-
-    // Admin gửi phản hồi
-    public function storeReply(Request $request)
-    {
-        $request->validate([
-            'contact_id' => 'required|exists:contacts,id',
-            'reply' => 'required|string',
-        ]);
-
-        ContactReply::create([
-            'contact_id' => $request->contact_id,
-            'replied_by_user_id' => Auth::id(),
-            'reply' => $request->reply,
-        ]);
-
-        return redirect()->back()->with('success', 'Đã gửi phản hồi!');
-    }
-
-    // Lấy số thông báo chưa đọc của user
-    public function unreadCount()
-    {
-        $userEmail = Auth::user()->email;
-
-        $unreadCount = Contact::where('email', $userEmail)
-                              ->whereHas('replies') 
-                              ->where('is_read', false)
-                              ->count();
-
-        return response()->json(['count' => $unreadCount]);
-    }
-
-    // Trang user xem các tin nhắn & đánh dấu đã đọc
-    public function message()
-    {
-        $userEmail = Auth::user()->email;
-
-        // Đánh dấu các phản hồi dành cho user hiện tại là đã đọc
-        Contact::where('email', $userEmail)
-            ->whereHas('replies') // chỉ đánh dấu những cái đã được trả lời
-            ->where('is_read', false)
-            ->update(['is_read' => true]);
-
-        // Lấy tất cả liên hệ đã gửi kèm phản hồi
-        $contacts = Contact::with('replies')
-            ->where('email', $userEmail)
-            ->latest()
-            ->get();
-
-        return view('user.contact-messages', compact('contacts'));
-    }
-
-    //  Tổng số tất cả các liên hệ có phản hồi
-    public function totalCount()
-    {
-        $userEmail = Auth::user()->email;
-
-        $total = Contact::where('email', $userEmail)
-                        ->whereHas('replies')
-                        ->count();
-
-        return response()->json(['total' => $total]);
-    }
-    public function counts()
-{
-    $userEmail = Auth::user()->email;
-
-    $total = Contact::where('email', $userEmail)
-                    ->whereHas('replies')
-                    ->count();
-
-    $unread = Contact::where('email', $userEmail)
-                     ->whereHas('replies')
-                     ->where('is_read', false)
-                     ->count();
-
-    return response()->json([
-        'total' => $total,
-        'unread' => $unread
-    ]);
-}
-
-}
-
-```
- 
-
-<h2>🧠CController</h2>
+<h2>🧠Controller</h2>
 
 #### Contact Controller
 
@@ -577,59 +478,59 @@ Ví dụ:CSRF & XSS Token bảo vệ form (ví dụ: productdetail.blade)
 
 ### 👤 Người Dùng (User)
 
-- **Đăng ký**  
+- **📝Đăng ký**  
   ![Đăng ký](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-ky.png)
 
-- **Đăng nhập**  
+- **🔐Đăng nhập**  
   ![Đăng nhập](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/dang-nhap.png)
 
-- **Trang chủ**  
+- ** 🏡 Trang chủ**  
   ![Home](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home.png)  
   ![Home 2](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home2.png)
 
-- **Trang giới thiệu**  
+- **🧑‍🌾Trang giới thiệu**  
   ![Giới thiệu](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/gioithieu.png)
 
-- **Trang sản phẩm**  
+- **🥗Trang sản phẩm**  
   ![Shop](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/shop.png)
 
-- **Giỏ hàng**  
+- **🧺Giỏ hàng**  
   ![Giỏ hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/giohang.png)
 
-- **Thanh toán (Checkout)**  
+- **🧾Thanh toán (Checkout)**  
   ![Checkout](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/checkout.png)
 
-- **Liên hệ**  
+- **📞Liên hệ**  
   ![Contact](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/contact.png)
 
-- **Trang phản hồi**  
+- **💬Trang phản hồi**  
   ![Phản hồi](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/phan_hoi.png)
 
 ---
 
-### 🔧 Quản Trị Viên (Admin)
+### 🛠️Quản Trị Viên (Admin)
 
-- **Dashboard**  
+- **📊Dashboard**  
   ![Dashboard](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/home_admin.png)
 
-- **Quản lý người dùng**  
+- **👥Quản lý người dùng**  
   ![Quản lý user](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlu.png)
 
-- **Quản lý đơn hàng**  
+- **📦Quản lý đơn hàng**  
   ![Quản lý đơn hàng](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlo.png)
 
-- **Quản lý sản phẩm**  
+- **🛍️Quản lý sản phẩm**  
   ![Quản lý sản phẩm](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlp.png)
 
-- **Quản lý danh mục**  
+- **📂Quản lý danh mục**  
   ![Quản lý danh mục](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/qlc.png)
 
-- **Thông báo**  
+- **🔔Thông báo**  
   ![Thông báo](https://raw.githubusercontent.com/PhanThiGiaHan108/Organ/master/public/assets/images/thongbao.png)
 
 ---
 ## 🔗 Liên Kết
-<<<<<<< HEAD
+
  -🔗 GitHub:https://github.com/PhanThiGiaHan108/Organ
 
  -🥦Readme (web io) :https://phanthigiahan108.github.io/Organ/
