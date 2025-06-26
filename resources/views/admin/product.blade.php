@@ -116,11 +116,11 @@
                     </div>
                     <div class="mb-3">
                         <label>Giá</label>
-                        <input type="number" class="form-control" name="price" value="{{ intval(old('price', $product->price)) }}" required> <span class="input-group-text">VNĐ</span>
+                        <input type="number" class="form-control" name="price" value="{{ intval(old('price', $product->price)) }}" required>
                     </div>
                     <div class="mb-3">
                         <label>Giá giảm (nếu có)</label>
-                        <input type="number" step="1" class="form-control" name="discount_price" value="{{ intval(old('discount_price', $product->discount_price)) }}"> <span class="input-group-text">VNĐ</span>
+                        <input type="number" step="1" class="form-control" name="discount_price" value="{{ intval(old('discount_price', $product->discount_price)) }}"> 
                     </div>
                     <div class="mb-3">
                         <label>Tồn kho</label>
@@ -131,10 +131,15 @@
                         <input type="text" name="description" class="form-control" value="{{ old('description', $product->description) }}" maxlength="200">
                     </div>
                     <div class="mb-3">
-                        <label>Ảnh sản phẩm</label>
+                        <label class="form-label">Ảnh sản phẩm (tùy chọn)</label>
                         <input type="file" class="form-control" name="image" accept="image/*">
                         @if ($product->image)
-                            <img src="{{ asset('img/product/' . $product->image) }}" alt="Image" width="100" class="mt-2">
+                            <div class="mt-2 p-2 border rounded bg-light text-center">
+                                <label class="form-label">Ảnh hiện tại:</label><br>
+                                <img src="{{ asset('img/product/' . $product->image) }}"
+                                     alt="Ảnh sản phẩm"
+                                     style="max-height: 200px; max-width: 100%; border-radius: 8px;">
+                            </div>
                         @endif
                     </div>
                 </div>
@@ -226,9 +231,9 @@
                         <label>Mô tả</label>
                         <input type="text" class="form-control" name="description">
                     </div>
-                    <div class="mb-3">
-                        <label>Ảnh sản phẩm</label>
-                        <input type="file" class="form-control" name="image" accept="image/*">
+                     <div class="mb-3">
+                            <label class="form-label">Ảnh sản phẩm</label>
+                            <input type="file" class="form-control" name="image">
                     </div>
                 </div>
                 <div class="modal-footer">

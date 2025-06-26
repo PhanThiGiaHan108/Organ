@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 
 class AdminProductController extends Controller
@@ -26,7 +27,7 @@ class AdminProductController extends Controller
         return view('admin.product', compact('products', 'categories'));
     }
 
-    // Lưu sản phẩm mới
+     // Thêm sản phẩm mới
     public function store(Request $request)
     {
         $request->validate([
@@ -36,73 +37,83 @@ class AdminProductController extends Controller
             'stock' => 'nullable|integer|min:0',
             'category_id' => 'required|exists:categories,id',
             'description' => 'nullable|string|max:1000',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
-        $product = new Product();
-        $product->name = $request->name;
-        $product->slug = Str::slug($request->name) . '-' . uniqid();
-        $product->price = $request->price;
-        $product->discount_price = $request->discount_price;
-        $product->stock = $request->stock ?? 0;
-        $product->description = $request->description;
-        $product->category_id = $request->category_id;
-
+        $imageName = null;
         if ($request->hasFile('image')) {
-            $product->image = $request->file('image')->store('products', 'public');
+            $image = $request->file('image');
+            $imageName = time() . '_' . Str::slug($request->name) . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('img/product'), $imageName);
         }
 
-        $product->save();
+        Product::create([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name) . '-' . uniqid(),
+            'price' => $request->price,
+            'discount_price' => $request->discount_price,
+            'stock' => $request->stock ?? 0,
+            'description' => $request->description,
+            'category_id' => $request->category_id,
+            'image' => $imageName,
+        ]);
 
         return redirect()->route('admin.product')->with('success', 'Thêm sản phẩm thành công!');
     }
 
     // Cập nhật sản phẩm
     public function update(Request $request, $id)
-    {
-        $product = Product::findOrFail($id);
+{
+    $product = Product::findOrFail($id);
 
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'price' => 'required|integer|min:0',
-            'discount_price' => 'nullable|numeric|min:0',
-            'stock' => 'nullable|integer|min:0',
-            'category_id' => 'required|exists:categories,id',
-            'description' => 'nullable|string|max:1000',
-            'image' => 'nullable|image|max:2048',
-        ]);
+    $request->validate([
+        'name' => "required|string|max:255|unique:products,name,{$id}",
+        'price' => 'required|integer|min:0',
+        'discount_price' => 'nullable|numeric|min:0',
+        'stock' => 'nullable|integer|min:0',
+        'category_id' => 'required|exists:categories,id',
+        'description' => 'nullable|string|max:1000',
+        'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+    ]);
 
-        $product->name = $request->name;
-        $product->slug = Str::slug($request->name) . '-' . uniqid();
-        $product->price = $request->price;
-        $product->discount_price = $request->discount_price;
-        $product->stock = $request->stock ?? 0;
-        $product->description = $request->description;
-        $product->category_id = $request->category_id;
-
-        if ($request->hasFile('image')) {
-            if ($product->image && Storage::disk('public')->exists($product->image)) {
-                Storage::disk('public')->delete($product->image);
-            }
-            $product->image = $request->file('image')->store('products', 'public');
+    // Cập nhật ảnh nếu có
+    if ($request->hasFile('image')) {
+        if ($product->image && File::exists(public_path('img/product/' . $product->image))) {
+            File::delete(public_path('img/product/' . $product->image));
         }
 
-        $product->save();
-
-        return redirect()->route('admin.product')->with('success', 'Cập nhật sản phẩm thành công!');
+        $image = $request->file('image');
+        $imageName = time() . '_' . Str::slug($request->name) . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('img/product'), $imageName);
+        $product->image = $imageName;
     }
+
+    $product->name = $request->name;
+    $product->slug = Str::slug($request->name) . '-' . uniqid();
+    $product->price = $request->price;
+    $product->discount_price = $request->discount_price;
+    $product->stock = $request->stock ?? 0;
+    $product->category_id = $request->category_id;
+    $product->description = $request->description;
+
+    $product->save();
+return redirect()->route('admin.product')->with('success', 'Cập nhật sản phẩm thành công!');
+
+
+}
 
     // Xóa sản phẩm
     public function destroy($id)
-    {
-        $product = Product::findOrFail($id);
+{
+    $product = Product::findOrFail($id);
 
-        if ($product->image && Storage::disk('public')->exists($product->image)) {
-            Storage::disk('public')->delete($product->image);
-        }
-
-        $product->delete();
-
-        return redirect()->route('admin.product')->with('success', 'Xóa sản phẩm thành công!');
+    if ($product->image && File::exists(public_path('img/product/' . $product->image))) {
+        File::delete(public_path('img/product/' . $product->image));
     }
+
+    $product->delete();
+
+    return redirect()->route('admin.product')->with('success', 'Xóa sản phẩm thành công!');
+}
+
 }

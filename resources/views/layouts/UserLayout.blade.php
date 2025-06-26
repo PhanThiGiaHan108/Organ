@@ -7,8 +7,8 @@
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-          <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Font -->
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -48,24 +48,24 @@
                         <div class="header__top__right">
                             <div class="header__top__right__auth">
                                 @auth
-                                <div class="theme-dropdown dropdown">
-                                    <button class="btn btn-purple dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa fa-user"></i> {{ Auth::user()->name ?? 'Guest' }}
-                                    </button>
-                                    <ul class="dropdown-menu show-dropdown">
-                                        <li>
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                <i class="fa fa-sign-out me-2"></i> Logout
-                                            </a>
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                @csrf
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </div>
-                                @else
-                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Login</a>
+                                    <div class="theme-dropdown dropdown">
+                                        <button class="btn btn-purple dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-user"></i> {{ Auth::user()->name ?? 'Guest' }}
+                                        </button>
+                                        <ul class="dropdown-menu show-dropdown">
+                                            <li>
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    <i class="fa fa-sign-out me-2"></i> Logout
+                                                </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    @else
+                                    <a href="{{ route('login') }}"><i class="fa fa-user"></i> Login</a>
                                 @endauth
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                             <li><a href="{{ route('user.shop') }}">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="{{ route('shop.cart') }}">Shoping Cart</a></li>
+                                    <li><a href="{{ route('shop.cart') }}">Shopping Cart</a></li>
                                     <li><a href="{{ route('checkout') }}">Check Out</a></li>
                                 </ul>
                             </li>
@@ -139,9 +139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="humberger__open">
-                <i class="fa fa-bars"></i>
-            </div>
+          
         </div>
     </header>
     <!-- Header Section End -->
@@ -157,7 +155,7 @@
             <!-- Cột trái: Logo + thông tin -->
             <div class="col-lg-6 col-md-12 mb-4 text-start">
                 <div class="footer__about__logo mb-3">
-                    <a href="#"><img src="{{ asset('img/logo.png') }}" alt="OGANI Logo" style="max-height: 50px;"></a>
+                    <a href="#"><img src="{{ asset('img/logo.png') }}" alt=" Logo" style="max-height: 50px;"></a>
                 </div>
                 <ul class="list-unstyled" style="color: #333; font-size: 15px;">
                     <li class="mb-2"><i class="fa fa-map-marker"></i> Address: Yen Nghia, Ha Dong, Ha Noi</li>

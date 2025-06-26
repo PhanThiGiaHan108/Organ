@@ -37,6 +37,7 @@
                 + Thêm danh mục
             </button>
         </div>
+        
     </div>
 
     <table class="table table-hover align-middle mt-0">
@@ -65,7 +66,7 @@
                 <a href="#" class="text-decoration-none text-warning me-2" data-bs-toggle="modal" data-bs-target="#editCategoryModal{{ $category->id }}">
                     <span data-bs-toggle="tooltip" title="Edit">✎</span>
                 </a>
-                <form action="{{ route('admin.category', $category->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa đơn hàng này?');">
+                <form action="{{ route('category.destroy', $category->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa danh mục này?');">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-link p-0 m-0 align-baseline text-danger text-decoration-none">
@@ -130,7 +131,7 @@
     {{-- Modal Add --}}
     <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md">
-            <form method="POST" action="{{ route('admin.category') }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('category.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header">
