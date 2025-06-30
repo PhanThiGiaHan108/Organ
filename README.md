@@ -535,7 +535,7 @@ Ví dụ:CSRF & XSS Token bảo vệ form (ví dụ: productdetail.blade)
 
  -🥦Readme (web io) :https://phanthigiahan108.github.io/Organ/
 
--🌐 Public Website: https://organshop-master-uvy5n7.laravel.cloud/login
+-🌐 Public Website: https://organshop-master-uvy5n7.laravel.cloud/register
 
  
 ## 📝 License
