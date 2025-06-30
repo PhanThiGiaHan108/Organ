@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->unsignedBigInteger('price'); // Giá gốc
-            $table->decimal('discount_price', 8, 2)->nullable(); // Giá giảm (có thể null)
+            $table->unsignedBigInteger('discount_price')->nullable(); // Giá giảm (có thể null)
             $table->integer('stock')->default(0); // Số lượng tồn kho
             $table->string('image')->nullable(); // Đường dẫn hình ảnh
             $table->unsignedBigInteger('category_id'); // Khóa ngoại tham chiếu đến categories
