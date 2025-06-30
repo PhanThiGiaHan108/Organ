@@ -17,10 +17,11 @@ class ProductController extends Controller
     /**
      * Display a listing of the products.
      */
-    public function index()
-    {  $categories = Category::all();
-         $products = Product::with('category')->get();
-        return view('user.home', compact('categories','products'));;
+    public function index() 
+    {  
+        $categories = Category::all();
+        $products = Product::with('category')->get();
+        return view('user.home', compact('categories','products'));
     }
  public function shop(Request $request)
 {
@@ -77,7 +78,6 @@ class ProductController extends Controller
 }
 
 
-
     public function showCategories()
     {
     $categories = Category::all();
@@ -127,10 +127,6 @@ class ProductController extends Controller
     
 
    
-    
-
-    
-
 
 }
    
